@@ -1,0 +1,8 @@
+{
+	"DBHost" : "mongodb://localhost:27017",
+	"options": {
+		"useMongoClient" : true
+	},
+	"secret": "test",
+	"port": 8080
+}
