@@ -1,6 +1,6 @@
 ### Prerequisite
   - install node.
-  - update mongodb server details in config under /config
+  - update mongodb server details in environmental configuration under /config folder
 
 ## Available Scripts
 
@@ -16,5 +16,4 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
+Launches the test runner in the interactive watch mode.
