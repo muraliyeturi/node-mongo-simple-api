@@ -20,7 +20,6 @@ function getUsers(req, res) {
  * POST /User to save a new User.
  */
 function postUser(req, res) {
-	console.log(req.body)
 	//Query the DB and if no errors, send all the Users
 	let query = User.find({email: req.body.email});
 	query.exec((err, Users) => {
@@ -80,8 +79,9 @@ function updateUser(req, res) {
 
 function login(req, res) {
 	const payload = {
-		email: req.body.username
-	}
+		email: req.body.username,
+		password: req.body.password
+	};
 
 	User.findOne(payload, (err, user) => {
 	 if (err) throw err;
@@ -90,7 +90,7 @@ function login(req, res) {
 		 res.json({ success: false, message: 'Authentication failed. User not found.' });
 	 } else if (user) {
 		 // check if password matches
-		 if (user.password != req.body.password) {
+		 if (user.password != payload.password) {
 			 res.json({message: 'Authentication failed. Wrong password.'});
 		 } else {
 			 // if user is found and password is right
