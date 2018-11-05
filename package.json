@@ -12,9 +12,11 @@
     "cors": "^2.8.4",
     "express": "^4.13.4",
     "jsonwebtoken": "^8.3.0",
+    "mongodb-stitch-browser-sdk": "^4.0.8",
     "mongoose": "^4.4.15",
-    "morgan": "^1.7.0",
-    "promise": "^8.0.1"
+    "morgan": "^1.9.1",
+    "promise": "^8.0.1",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -22,7 +24,7 @@
     "mocha": "^2.4.5"
   },
   "scripts": {
-    "start": "SET NODE_ENV=dev && node server.js",
+    "start": "node server.js",
     "test": "mocha --timeout 10000"
   }
 }
