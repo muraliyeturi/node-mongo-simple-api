@@ -1,6 +1,6 @@
 let user = require('../routes/user');
 
-init = (app) => {
+init = (app, jwt, config) => {
    // verify token for every request
    app.use(function(req, res, next) {
      res.append("Access-Control-Allow-Origin", ["*"]);
