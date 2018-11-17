@@ -24,7 +24,7 @@ app.use(bodyParser.json({ type: "application/json" }));
 apiProxyCache.init(app);
 
 //create api endpoint
-api.init(app);
+api.init(app, jwt, config);
 
 //start server and listen to port
 app.listen(config.port);
